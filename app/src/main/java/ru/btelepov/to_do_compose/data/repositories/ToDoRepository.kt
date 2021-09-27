@@ -1,10 +1,11 @@
 package ru.btelepov.to_do_compose.data.repositories
 
+import dagger.hilt.android.scopes.ViewModelScoped
 import kotlinx.coroutines.flow.Flow
 import ru.btelepov.to_do_compose.data.db.ToDoDao
 import ru.btelepov.to_do_compose.data.models.ToDoTask
 import javax.inject.Inject
-
+@ViewModelScoped
 class ToDoRepository @Inject constructor(private val toDoDao: ToDoDao) {
 
 
